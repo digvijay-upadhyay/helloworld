@@ -16,4 +16,4 @@ jobs:
           command: npm install
       - run:
           name: Running test cases
-          command: npm run test
+          command: jest
