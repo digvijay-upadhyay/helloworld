@@ -15,5 +15,8 @@ jobs:
           name: install dependencies
           command: npm install
       - run:
+          name: install jest
+          command: npm install --save-dev jest
+      - run:
           name: Running test cases
           command: jest
