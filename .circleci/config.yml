@@ -16,7 +16,7 @@ jobs:
           command: npm install
       - run:
           name: install jest
-          command: npm install -g jest
+          command: sudo npm install -g jest
       - run:
           name: Running test cases
           command: jest
