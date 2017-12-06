@@ -27,11 +27,10 @@
     },
     "preset": "react-native",
     "setupFiles": [
-      "<rootDir>/jest-config/enzyme.js",
-      "<rootDir>/__mocks__/react-native-i18n.js"
+      
     ],
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!(react-native|react-navigation|mobx-react|react-native-vector-icons|react-native-datepicker|react-native-mock)/)"
+      
     ],
     "moduleFileExtensions": [
       "js",
