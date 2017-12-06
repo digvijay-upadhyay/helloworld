@@ -14,10 +14,35 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js",
-    "test-watch": "node node_modules/jest/bin/jest.js --watch"
+    "test-watch": "jest"
   },
   "jest": {
-    "preset": "jest-expo"
+    "verbose": true,
+    "globals": {
+      "__DEV__": false
+    },
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/jest-config/enzyme.js",
+      "<rootDir>/__mocks__/react-native-i18n.js"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(react-native|react-navigation|mobx-react|react-native-vector-icons|react-native-datepicker|react-native-mock)/)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "coverageDirectory": "<rootDir>/"
   },
   "dependencies": {
     "expo": "^23.0.4",
