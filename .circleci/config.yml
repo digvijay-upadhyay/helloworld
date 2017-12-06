@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: circleci/node:6.11.4
     steps:
       - checkout
       - run:
@@ -13,4 +13,4 @@ jobs:
           command: date
       - run:
           name: Run tests
-          command: echo Hold On wait for it...
+          command: npm run test
