@@ -13,4 +13,4 @@ jobs:
           command: date
       - run:
           name: Run tests
-          command: npm run test
+          command: echo Hold On wait for it...
